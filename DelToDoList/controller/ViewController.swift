@@ -17,8 +17,7 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view
         super.viewDidLoad()
-        let url = URL(string: "https://api.thecatapi.com/v1/images/search")
-        imageView.load(url: url!)
+        imageView.loadImage()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +48,6 @@ class ViewController: UIViewController {
         }
     }
 
-    
     func parseJSON(_ parseData: Data) -> UIImage? {
         let decoder = JSONDecoder()
         do {
@@ -77,7 +75,8 @@ extension String {
 }
 
 extension UIImageView {
-    func load(url: URL) {
+    func loadImage() {
+        guard let url = URL(string: "https://spartacodingclub.kr/css/images/scc-og.jpg") else { return }
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {

@@ -19,9 +19,9 @@ class TodoViewController: UIViewController {
         super.viewDidLoad()
         pf.delegate = self
         pf.dataSource = self
-        findList()
-        findcompleList()
-        findSection()
+        methodData().findList()
+        methodData().findcompleList()
+        methodData().findSection()
     }
     
     
@@ -54,8 +54,8 @@ class TodoViewController: UIViewController {
                     sections.append(sectionName)
                     list.append(appendList)
                     
-                    self.setSection(sections)
-                    self.setList(list)
+                    methodData().setSection(sections)
+                    methodData().setList(list)
                     self.pf.reloadAllComponents()
                     self.todoTableView.reloadData()
                 }
@@ -108,7 +108,7 @@ class TodoViewController: UIViewController {
                 let newItem = List(title: textField.text!, done: false , date: dateData())
                 list[self.selectedSection].append(newItem)
 
-                self.setList(list)
+                methodData().setList(list)
                 self.todoTableView.reloadData()
             }
         }
@@ -143,8 +143,8 @@ class TodoViewController: UIViewController {
                     compleList.remove(at: indexToRemove)
                 }
             }
-                  setCompleList(compleList)
-            setSwitch(sender: cell.todoCellSwitch, indexPath: indexPath, listfind: listfind.title)
+            methodData().setCompleList(compleList)
+            methodData().setSwitch(sender: cell.todoCellSwitch, indexPath: indexPath, listfind: listfind.title)
             }
     }
 }
@@ -168,16 +168,17 @@ extension TodoViewController: UITableViewDelegate{
             }
             
             tableView.deleteRows(at: [indexPath], with: .fade)
-            setList(list)
-            setCompleList(compleList)
-            setSection(sections)
+            
+            methodData().setList(list)
+            methodData().setCompleList(compleList)
+            methodData().setSection(sections)
             
             if list[indexPath.section].isEmpty {
                 sections.remove(at: indexPath.section)
                 list.remove(at: indexPath.section)
                 
-                setSection(sections)
-                setList(list)
+                methodData().setSection(sections)
+                methodData().setList(list)
                 
                 pf.reloadAllComponents()
                 todoTableView.reloadData()
@@ -222,7 +223,7 @@ extension TodoViewController: UITableViewDataSource {
 
         selectedSection2 = indexPath.section
         
-        findSwitch(cell.todoCellSwitch, indexPath: indexPath, item: cell.todoCellLabel.text!)
+        methodData().findSwitch(cell.todoCellSwitch, indexPath: indexPath, item: cell.todoCellLabel.text!)
         cell.todoCellSwitch.addTarget(self, action: #selector(self.tSwitch(sender:)), for: .valueChanged)
         
         if list[indexPath.section][indexPath.row].done {
@@ -264,66 +265,6 @@ extension TodoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
 
 
-extension TodoViewController {
-
-    func setList(_ list: [[List]]){
-        DispatchQueue.global().async {
-            let propertyListEncoder = try? PropertyListEncoder().encode(list)
-            self.saveData.set(propertyListEncoder, forKey: "ToDoList")
-
-        }
-    }
-    
-    func setCompleList(_ doneList: [List]){
-        DispatchQueue.global().async {
-            let propertyListEncoder = try? PropertyListEncoder().encode(doneList)
-            self.saveData.set(propertyListEncoder, forKey: "DoneList")
-        }
-    }
-    func findList() {
-        if let data = saveData.data(forKey: "ToDoList") {
-            if let decodedList = try? PropertyListDecoder().decode([[List]].self, from: data) {
-                list = decodedList
-            }
-        }
-    }
-    
-    func setSection(_ sections: [String]){
-        DispatchQueue.global().async {
-            let propertyListEncoder = try? PropertyListEncoder().encode(sections)
-            self.saveData.set(propertyListEncoder, forKey: "Sections")
-        }
-    }
-    
-    func setSwitch(sender: UISwitch, indexPath: IndexPath, listfind: String){
-            let switchKey = "SwitchState \(indexPath.section) \(indexPath.row) \(listfind)"
-            saveData.set(sender.isOn, forKey: switchKey)
-        }
-    
-    
-    func findcompleList() {
-        if let data = saveData.data(forKey: "CompleList") {
-            if let decodedList = try? PropertyListDecoder().decode([List].self, from: data) {
-                compleList = decodedList
-            }
-        }
-    }
-    
-    func findSection() {
-        if let data = saveData.data(forKey: "Sections") {
-            if let decodedSections = try? PropertyListDecoder().decode([String].self, from: data) {
-                sections = decodedSections
-            }
-        }
-    }
-    
-    func findSwitch(_ switchControl: UISwitch, indexPath: IndexPath, item: String) {
-           let switchKey = "SwitchState \(indexPath.section) \(indexPath.row) \(item)"
-           let switchState = saveData.bool(forKey: switchKey)
-           switchControl.isOn = switchState
-       }
-    
-}
 
 
 
