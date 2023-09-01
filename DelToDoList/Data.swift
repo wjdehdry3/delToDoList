@@ -14,7 +14,7 @@ struct List: Codable {
     var date : String
 }
 
-var dailyList = [List]()
+var Category = [List]()
 var compleList = [List]()
 var selectedSection2 = 0
 
@@ -22,7 +22,7 @@ struct ImageData: Codable {
     let url: String
 
 }
-var list = [dailyList]
+var list = [Category]
 var sections : Array<String> = []
 
 struct methodData {
@@ -47,6 +47,7 @@ struct methodData {
             }
         }
     }
+    
     func setSection(_ sections: [String]){
         DispatchQueue.global().async {
             let propertyListEncoder = try? PropertyListEncoder().encode(sections)

@@ -10,7 +10,6 @@ import UIKit
 class TodoViewController: UIViewController {
     @IBOutlet weak var todoTableView: UITableView!
  
-    let saveData = UserDefaults.standard
     let vc = UIViewController()
     var selectedSection = 0
     var pf = UIPickerView()
@@ -22,6 +21,7 @@ class TodoViewController: UIViewController {
         methodData().findList()
         methodData().findcompleList()
         methodData().findSection()
+
     }
     
     
@@ -221,6 +221,7 @@ extension TodoViewController: UITableViewDataSource {
         cell.todoCellSwitch.tag = indexPath.row
         cell.todoCellDateLabel.text = list[indexPath.section][indexPath.row].date
 
+        
         selectedSection2 = indexPath.section
         
         methodData().findSwitch(cell.todoCellSwitch, indexPath: indexPath, item: cell.todoCellLabel.text!)

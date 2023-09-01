@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         imageView.loadImage()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         catImageURL()
