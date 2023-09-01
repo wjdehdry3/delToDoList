@@ -20,9 +20,10 @@ V  view         스토리 보드가 뷰 아닌가...?
 C  controller  동작관련 컨트롤러도 따로 분리  
 
 
+
 ## 화면 구성
 <img src= "https://github.com/wjdehdry3/delToDoList/assets/64249456/11061eea-6a4e-4efa-9773-1c18cf28c1d9.png" width="180" height="400"/>
- <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/ebc53c98-c4b1-4f3a-89c6-0d5c8c0ee59c.png" width="180" height="400"/>
+ <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/6603f870-6404-492b-b88e-7036db9b04ba.png" width="180" height="400"/>
  <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/3131b66f-1ab7-4ead-8f55-3f6556f22d04.png" width="180" height="400"/>
  <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/baed78f0-2657-46dd-9685-20579da55fff.png" width="180" height="400"/>
 <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/43e6a0cb-eace-41d3-b52a-d48bcd4c751e.png" width="180" height="400"/>
