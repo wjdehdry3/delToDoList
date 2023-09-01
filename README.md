@@ -10,7 +10,7 @@ Launch Screen설정 해서 앱 켤때 사진 나옴
 
 
 ## 다이어그램
-![스크린샷 2023-09-01 오전 8 20 19](https://github.com/wjdehdry3/swift_TodoList/assets/64249456/caa34e49-bf64-44aa-bcea-cc1678a52d7b)
+![스크린샷 2023-09-01 오전 8 20 19](https://github.com/wjdehdry3/delToDoList/assets/64249456/be924011-96d5-4ccf-b4a2-c08f396bd467)
 
 
 M  modal        데이터를 따로 분리  
@@ -20,15 +20,14 @@ V  view         스토리 보드가 뷰 아닌가...?
 C  controller  동작관련 컨트롤러도 따로 분리  
 
 
-
 ## 화면 구성
-<img src= "https://github.com/wjdehdry3/swift_TodoList/assets/64249456/78b7bf53-f1f3-484f-b302-4e715f59d73e.png" width="180" height="400"/>
- <img src="https://github.com/wjdehdry3/swift_TodoList/assets/64249456/199e754a-19bc-409e-a4b6-c47e0b56ed9c.png" width="180" height="400"/>
- <img src="https://github.com/wjdehdry3/swift_TodoList/assets/64249456/cb528d5b-6f4f-40ad-be57-19d0f4473b60.png" width="180" height="400"/>
- <img src="https://github.com/wjdehdry3/swift_TodoList/assets/64249456/34b3e48e-01a3-415a-895d-836169b15933.png" width="180" height="400"/>
-<img src="https://github.com/wjdehdry3/swift_TodoList/assets/64249456/20895697-21aa-4553-97b9-889a44be6081.png" width="180" height="400"/>
+<img src= "https://github.com/wjdehdry3/delToDoList/assets/64249456/11061eea-6a4e-4efa-9773-1c18cf28c1d9.png" width="180" height="400"/>
+ <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/ebc53c98-c4b1-4f3a-89c6-0d5c8c0ee59c.png" width="180" height="400"/>
+ <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/3131b66f-1ab7-4ead-8f55-3f6556f22d04.png" width="180" height="400"/>
+ <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/baed78f0-2657-46dd-9685-20579da55fff.png" width="180" height="400"/>
+<img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/43e6a0cb-eace-41d3-b52a-d48bcd4c751e.png" width="180" height="400"/>
 
-  <img src= "https://github.com/wjdehdry3/swift_TodoList/assets/64249456/0f9d2b08-6472-481e-b9f6-35b9c4f64059.png" width="180" height="400"/>
- <img src="https://github.com/wjdehdry3/swift_TodoList/assets/64249456/29013633-a3cf-4f10-a1fc-324263bf4958.png" width="180" height="400"/>
- <img src="https://github.com/wjdehdry3/swift_TodoList/assets/64249456/02814ed0-6471-4f4d-88ea-e3903b5376a6.png" width="180" height="400"/>
- <img src="https://github.com/wjdehdry3/swift_TodoList/assets/64249456/95a373f9-5e2f-450c-acac-956aa9c14daf.png" width="180" height="400"/>
+  <img src= "https://github.com/wjdehdry3/delToDoList/assets/64249456/27478d3e-fb2a-4676-9560-43dbc19bc0df.png" width="180" height="400"/>
+ <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/7313c665-0f46-4067-94ff-a6e7e217e9a2.png" width="180" height="400"/>
+ <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/1cf3897e-605c-42a3-a222-6a29dd7a8f69.png" width="180" height="400"/>
+ <img src="https://github.com/wjdehdry3/delToDoList/assets/64249456/046b3d83-abf1-467f-afcd-f64744d85293.png" width="180" height="400"/>
