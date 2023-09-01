@@ -13,11 +13,11 @@ Launch Screen설정 해서 앱 켤때 사진 나옴
 ![스크린샷 2023-09-01 오전 8 20 19](https://github.com/wjdehdry3/delToDoList/assets/64249456/be924011-96d5-4ccf-b4a2-c08f396bd467)
 
 
-M  modal        데이터를 따로 분리  
+M  modal        데이터를 따로 분리, 함수도 여기로 분류함
 
-V  view         스토리 보드가 뷰 아닌가...?  
+V  view         스토리 보드가 뷰 아닌가...? 코드로 화면 작성하면 많이 들어갈 것 같다
 
-C  controller  동작관련 컨트롤러도 따로 분리  
+C  controller   뷰 컨트롤러 끼리 따로 분류했다
 
 
 
