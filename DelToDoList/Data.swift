@@ -86,3 +86,5 @@ struct methodData {
 
 
 
+// 1차 유저 디폴트 공부
+// 2차 
